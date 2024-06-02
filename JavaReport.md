@@ -23,11 +23,19 @@ The initial libraries employed are `java.util.HashSet`, `java.util.HashMap`, and
 ## Questions
 **What company (oem) has the highest average weight of the phone body?**
 
+  - HP has the highest average weight of the phone body 4536 grams.
+
 **Was there any phones that were announced in one year and released in another? What are they? Give me the oem and models.**
+
+  - There is no phone that were announced and realeased in different year.
 
 **How many phones have only one feature sensor?**
 
+  - There are 432 phones with one feature sensor.
+
 **What year had the most phones launched in the 2000s?**
+
+  - 2004 has the most phones launched in the 2000s with 109 phones.
 
 ## Output
 
