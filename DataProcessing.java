@@ -8,6 +8,11 @@ public class DataProcessing {
         readFile("./Data/cells.csv");
     }
 
+    /**
+     * Read data from a csv file and processes it.
+     * @param fileLoc       The location of the csv file
+     * @throws IOException      if an I/O error occurs
+     */
     static void readFile(String fileLoc) throws IOException {
         CellsReport cellsReport = new CellsReport();
 
@@ -22,6 +27,7 @@ public class DataProcessing {
             throw e;
         }
 
+        // Prints data
         System.out.println();
         System.out.println("*** Yearly Model Count *** ");
         cellsReport.printYearlyModel();
@@ -63,6 +69,11 @@ public class DataProcessing {
         System.out.println("--------------------------------------------------------------------------------------");
     }
 
+    /**
+     * Parse a line from the csv file into a cell object
+     * @param line      the line from the csv file
+     * @return      the cell object parsed from the line
+     */
     public static Cell parseLine(String line) {
         String[] subs = line.split(",");
         Cell c = new Cell();
@@ -123,6 +134,11 @@ public class DataProcessing {
         return c;
     }
 
+    /**
+     * Retrieves the launch year from the launch status string
+     * @param str       The launch status string
+     * @return      The launch year
+     */
     private static int getLaunchYear(String str) {
         if (str.isEmpty()) {
             return 0;
@@ -138,6 +154,11 @@ public class DataProcessing {
         return Integer.parseInt(year);
     }
 
+    /**
+     * Retrieves the display size from the display size string
+     * @param str the display size string
+     * @return      the display size
+     */
     private static float getDisplaySize(String str) {
         if (str.isEmpty()) {
             return 0;
@@ -161,6 +182,11 @@ public class DataProcessing {
         }
     }
 
+    /**
+     * Retrieves the body weight from the body weight string
+     * @param str   the body weight string
+     * @return      the body weight
+     */
     private static float getBodyWeight(String str) {
         if (str.isEmpty()) {
             return 0;

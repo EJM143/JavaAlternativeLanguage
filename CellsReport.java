@@ -2,25 +2,40 @@ import java.util.*;
 
 public class CellsReport {
 
-
     private Set<Cell> cells = new HashSet<>();
     private int duplicate = 0;
 
+    /**
+     * Adds a cell phone to the report
+     * @param c     the cellphone to add
+     */
     public void addCell(Cell c) {
         if (!cells.add(c)) {
             duplicate++;
         }
     }
 
+    /**
+     * Deletes a cell phone from the report
+     * @param c     the cellphone to delete
+     */
     public void deleteCell(Cell c) {
+
         cells.remove(c);
     }
 
+    /**
+     * Retrieves the count of duplicate cellphone entries
+     * @return the count of duplicate cellphone entries
+     */
     public int duplicateRow() {
 
         return duplicate;
     }
 
+    /**
+     * Prints the count of cellphones launched yearly
+     */
     public void printYearlyModel() {
         Map<Integer, Integer> yearlyList = new HashMap<>();
 
@@ -33,6 +48,9 @@ public class CellsReport {
         }
     }
 
+    /**
+     * Prints the counts of cellphones by OEM
+     */
     public void printOem() {
         Map<String, Integer> oemList = new HashMap<>();
 
@@ -45,6 +63,9 @@ public class CellsReport {
         }
     }
 
+    /**
+     * Prints the counts of cellphones by body sim
+     */
     public void printBodySim() {
         Map<String, Integer> bodyList = new HashMap<>();
 
@@ -57,6 +78,9 @@ public class CellsReport {
         }
     }
 
+    /**
+     * Prints the counts of cellphones by display type
+     */
     public void printDisplayType() {
         Map<String, Integer> displayList = new HashMap<>();
 
@@ -69,6 +93,9 @@ public class CellsReport {
         }
     }
 
+    /**
+     * Prints the counts of cellphones by platdorm OS
+     */
     public void printPlatformOs() {
         Map<String, Integer> platformOsList = new HashMap<>();
 
@@ -81,6 +108,9 @@ public class CellsReport {
         }
     }
 
+    /**
+     * Prints the OEM with the highest average weight
+     */
     public void printHighestAveWt() {
         Map<String, OemWeightData> oemWtData = new HashMap<>();
 
@@ -126,6 +156,9 @@ public class CellsReport {
         }
     }
 
+    /**
+     * prints the count of phones announced in one year and realeased in another
+     */
     public void printPhonesInDiffYrs() {
         List<Cell> phonesInDiffYrs = new ArrayList<>();
 
@@ -148,6 +181,11 @@ public class CellsReport {
         }
     }
 
+    /**
+     * Retrieves the release year from the launch status string
+     * @param launchStatus      the launch status string
+     * @return      the release year
+     */
     private int getReleaseYr(String launchStatus) {
         if (launchStatus == null || launchStatus.isEmpty()) {
             return 0;
@@ -166,6 +204,9 @@ public class CellsReport {
         return 0;
     }
 
+    /**
+     * Prints the count of phones with only one feature sensor
+     */
     public void printPhonesWOneFSensor() {
         int count = 0;
 
@@ -181,6 +222,9 @@ public class CellsReport {
         System.out.println("The number of phones with only one feature sensor is " + count + ".");
     }
 
+    /**
+     * Prints the year with most cellphones launched in the year 2000s
+     */
     public void printYrMostLaunched() {
         Map<Integer, Integer> yearlyLaunchCount = new HashMap<>();
 
@@ -208,6 +252,10 @@ public class CellsReport {
         }
     }
 
+    /**
+     * Generates a string representation of the cellphones in the report
+     * @return   A string representation of the cellphones in the report
+     */
     @Override
     public String toString() {
         StringBuilder result = new StringBuilder();

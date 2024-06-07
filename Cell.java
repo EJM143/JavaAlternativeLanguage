@@ -12,6 +12,7 @@ public class Cell {
     private String featuresSensors;
     private String platformOs;
 
+    // Getters and setters
     public String getOem() {
         return oem;
     }
@@ -108,7 +109,12 @@ public class Cell {
         this.platformOs = platformOs;
     }
 
-    // ToString method
+
+    /**
+     * Returns a string representation of the phone
+     * @return A string representation of the phone
+     */
+
     @Override
     public String toString() {
         return "oem:" + oem + ", model:" + model + ", launch_announced: " + launchAnnounced + ", launch_status: " +
