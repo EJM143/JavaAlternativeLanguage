@@ -3,6 +3,8 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class JUnitTest {
+
+    // Test for parseLine
     @Test
     public void parseLineTest() {
         String line = "Samsung,Galaxy S21,2021,Released 2021,151.7 x 71.2 x 7.9 mm,169g,Dual SIM,AMOLED,6.2,1080x2400,Accelerometer,Android 11";

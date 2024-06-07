@@ -104,7 +104,6 @@ public class Cell {
     public String getPlatformOs() {
         return platformOs;
     }
-
     public void setPlatformOs(String platformOs) {
         this.platformOs = platformOs;
     }
